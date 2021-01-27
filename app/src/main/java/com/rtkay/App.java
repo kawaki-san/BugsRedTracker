@@ -3,12 +3,33 @@
  */
 package com.rtkay;
 
-public class App {
+import javafx.application.Application;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.stage.Stage;
+import jfxtras.styles.jmetro.JMetro;
+import jfxtras.styles.jmetro.Style;
+
+public class App extends Application {
     public String getGreeting() {
         return "Hello World!";
     }
 
     public static void main(String[] args) {
-        System.out.println(new App().getGreeting());
+        launch(args);
+    }
+
+    @Override
+    public void start(Stage primaryStage) throws Exception {
+        // TODO Auto-generated method stub
+        Parent root = FXMLLoader.load(getClass().getResource("main.fxml"));
+        JMetro jMetro = new JMetro(Style.LIGHT);
+        Scene scene = new Scene(root, 800, 600);
+        jMetro.setScene(scene);
+        scene.getStylesheets().add(getClass().getResource("theme/fonts/selector.css").toExternalForm());
+        primaryStage.setScene(scene);
+        primaryStage.setTitle(getGreeting());
+        primaryStage.show();
     }
 }
