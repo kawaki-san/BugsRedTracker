@@ -39,3 +39,10 @@
     Font Weights
 
 ********************/
+
+.password-field {
+  -fx-text-fill: Black;
+}
+.heading {
+  -fx-font-size: 20px;
+}

@@ -32,6 +32,7 @@ dependencies {
     implementation 'org.jfxtras:jmetro:11.6.14'
     implementation 'org.kordamp.ikonli:ikonli-fluentui-pack:12.1.0'
     implementation 'org.kordamp.ikonli:ikonli-javafx:12.1.0'
+    implementation 'com.h2database:h2:1.4.200'
 }
 
 application {
